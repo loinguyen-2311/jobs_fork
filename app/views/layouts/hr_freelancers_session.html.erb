@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Login Form
+        </title>
+        <!-- Stylesheets -->
+        <%= stylesheet_link_tag 'candidates/bootstrap' %>
+        <%= stylesheet_link_tag 'candidates/style' %>
+        <%= stylesheet_link_tag 'candidates/responsive' %>
+        <%= stylesheet_link_tag 'candidates/icons' %>
+        <%= stylesheet_link_tag 'candidates/flaticon' %>
+        <%= stylesheet_link_tag 'candidates/fontawesome-all' %>
+        <%= stylesheet_link_tag 'candidates/line-awesome' %>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        <!-- Responsive -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <!-- Preloader -->
+            <div class="preloader"></div>
+            <!-- Main Header-->
+            <header class="main-header">
+                <div class="container-fluid">
+                    <!-- Main box -->
+                    <div class="main-box">
+                        <!--Nav Outer -->
+                        <div class="nav-outer">
+                            <div class="logo-box">
+                                <div class="logo"><a href="/"><img src="https://devfinding.com/assets/logoweb-727cd8a68dbc9c4351067553cacb93d791e8f9a7e7e67383ba00f07e5afff092.png" alt="" title=""></a></div>
+                            </div>
+                        </div>
+                        <div class="outer-box">
+                            <!-- Login/Register -->
+                            <div class="btn-box">
+                                <a href="/" class="theme-btn btn-style-one"><span class="btn-title">Home</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Header -->
+                <div class="mobile-header">
+                    <div class="logo"><a href="/"><img src="https://devfinding.com/assets/logoweb-727cd8a68dbc9c4351067553cacb93d791e8f9a7e7e67383ba00f07e5afff092.png" alt="" title=""></a></div>
+                    <div class="outer-box">
+                        <a href="/" class="theme-btn btn-style-one"><span class="btn-title">Home</span></a>
+                    </div>
+                </div>
+                <!-- Mobile Nav -->
+                <div id="nav-mobile"></div>
+            </header>
+            <!--End Main Header -->
+            <%= yield %>
+        </div>
+        <!-- End Page Wrapper -->
+        <!-- End Page Wrapper -->
+        <script src="https://creativelayers.net/themes/superio/js/jquery.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/popper.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/chosen.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/bootstrap.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/jquery-ui.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/jquery.fancybox.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/jquery.modal.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/mmenu.polyfills.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/mmenu.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/appear.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/ScrollMagic.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/rellax.min.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/owl.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/wow.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/knob.js"></script>
+        <script src="https://creativelayers.net/themes/superio/js/script.js"></script>
+        <!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
+        <script src="https://creativelayers.net/themes/superio/js/chart.min.js"></script>
+    </body>
+</html>

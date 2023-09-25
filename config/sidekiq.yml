@@ -1,0 +1,16 @@
+---
+:verbose: false
+development:
+  :concurrency: 20
+staging:
+  :concurrency: 10
+production:
+  :concurrency: 20
+:queues:
+  - [high_priority, 5]
+  - [default, 3]
+  - [low_priority, 2]
+  - [heavy_tasks, 1]
+  - [mailers, 1]
+  - [searchkick, 1]
+  - [web_hook, 2]

@@ -1,0 +1,21 @@
+<h3>
+  Xin chào Anh Em. Có một ứng viên mới Apply Job "<%= @job.title %>" trên hệ thống
+<br/>
+
+<a class="PasswordReset-link" href="https://devfinding.com/single_job/<%= @job.id %>?<%= @job.title %>">
+    <div class="PasswordReset-resetButton">
+      <div class="PasswordReset-textButton">
+        View Job Now
+      </div>
+    </div>
+  </a>
+</h3>
+
+<a class="PasswordReset-link" href="https://devfinding.com/admin/jobs/<%= @job.id %>/cvs">
+    <div class="PasswordReset-resetButton">
+      <div class="PasswordReset-textButton">
+        View In Admin
+      </div>
+    </div>
+  </a>
+</h3>

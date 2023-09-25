@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="col-sm-12">
+	<div class="bg-picture card-box">
+		<div class="profile-info-name">
+			<% if @users.avatar_file_name == nil %>
+			<%= image_tag "avatar-image.png", alt: "profile-image", :class => "img-thumbnail card-box" %>
+			<% else %>
+			<%= image_tag @users.avatar.url("original"), alt: "profile-image", :class => "img-thumbnail card-box" %>
+			<% end %>
+			<div class="row">
+				<div class="col-lg-8">
+				<form class="form-horizontal card-box" role="form">
+					<div class="form-group">
+						<label class="col-md-2 control-label">Full Name</label>
+						<div class="col-md-10">
+							<input readonly type="text" class="form-control" value="<%= @users.full_name %>"  >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label" for="example-email">Email</label>
+						<div class="col-md-10">
+							<input readonly type="email" id="example-email" name="example-email" class="form-control" value="<%= @users.email %>" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">@users Type</label>
+						<div class="col-md-10">
+							<input readonly type="text" class="form-control" value="<%= @users.user_type%>" > 
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">Phone NUmber</label>
+						<div class="col-md-10">
+							<input readonly type="text" class="form-control" value="<%= @users.phone_number%>" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">Complete profile</label>
+						<div class="col-md-10">
+							<% if @users[:complete_profile] == 1%>
+							<input readonly type="text" class="form-control" placeholder="completed" >
+							<% else %>
+							<input readonly type="text" class="form-control" placeholder="Not complete">
+							<% end %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-2 control-label">Created day</label>
+						<div class="col-md-10">
+							<input readonly type="text" class="form-control" placeholder="completed" value="<%= @users.created_at.strftime("%d-%m-%Y %I:%M%p") %>" >
+						</div>
+					</div>
+				</form>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	</div>
+</div>

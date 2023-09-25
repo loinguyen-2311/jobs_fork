@@ -1,0 +1,22 @@
+{
+  "name": "Viecdayroi",
+  "homepage": "https://github.com/nguyenvanhuan243/Viecdayroi_BackEnd",
+  "authors": [
+    "Nguyen Van Huan <nguyenvanhuan243@gmail.com>"
+  ],
+  "description": "Bower tool",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert2": "^7.29.0"
+  }
+}

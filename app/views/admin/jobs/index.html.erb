@@ -1,0 +1,107 @@
+<script>
+  const handleSearchKeyword = () => {
+    const keyword = $("#keyword-search").val()
+    if (keyword === '') return alert('Enter your keyword')
+    const searchUrl = `https://devfinding.com/admin/jobs?keyword=${keyword}`
+    window.open(searchUrl)
+  }
+</script>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card-box">
+      <div class="table-rep-plugin">
+        <div class="table-responsive" data-pattern="priority-columns">
+          <table id="datatable" class="table  table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th data-priority="1">Title</th>
+                <th data-priority="1">
+                  <a href="/admin/jobs">
+                    Status
+                  </a>
+                </th>
+                <th data-priority="1">Synced_From</th>
+                <th data-priority="1">Min_Salary</th>
+                <th data-priority="1">Max_Salary</th>
+                <th data-priority="1">View_Job</th>
+                <th data-priority="1">Commission</th>
+                <th data-priority="6">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @jobs.each do |job| %> 
+              <tr>
+                <td><span class="co-name"><%= job.id %></span></td>
+                <td>
+                  <%= job.title %>
+                </td>
+                <td>
+                  <% if job[:status] == Job.statuses[:pending] || job[:status] == Job.statuses[:closed] %> 
+                    <a href="?status=<%= Job.statuses[:"#{job.status}"] %>" class="label label-danger">
+                      <%= job.status %>
+                    </a>
+                  <% else %>
+                    <a href="?status=<%= Job.statuses[:"#{job.status}"] %>" class="label label-success">
+                      <%= job.status %>
+                    </a>
+                  <% end %>
+                </td>
+                <td>
+                  <%= job.sync_from_partner %>
+                </td>
+                <td> <%= job.min_salary || 'N/A' %> </td>
+                <td> <%= job.max_salary || 'N/A' %> </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href="https://devfinding.com/single_job/<%= job.id %>"
+                    class="btn btn-success waves-effect w-md waves-light m-b-5"
+                  >
+                    View Job
+                  </a>
+                </td>
+                <td>
+                  <%= job.commission %>
+                </td>
+                <td>
+                  <button
+                    onclick="handleDeleteJob(<%= job.id %>)"
+                    class="btn btn-danger waves-effect w-md waves-light m-b-5"
+                  >
+                    Delete
+                  </button>
+                  <% if job.status == Job.statuses[:going] %>
+                    <button disabled class="btn btn-success waves-effect w-md waves-light m-b-5">
+                      Approve
+                    </button>
+                  <% else %>
+                    <button
+                      onclick="handleApproveJob(<%= job.id %>)"
+                      class="btn btn-success waves-effect w-md waves-light m-b-5"
+                    >
+                      Approve
+                    </button>
+                  <% end %>
+                  <a
+                    href="<%= admin_job_cvs_path(job.id) %>"
+                    class="btn btn-success waves-effect w-md waves-light m-b-5"
+                  >
+                    View CVs (<%= @cv_group_by_job_ids[job.id] || 0 %>)
+                  </a>
+                  <a
+                    href="?have_cv=true"
+                    class="btn btn-success waves-effect w-md waves-light m-b-5"
+                  >
+                    Have Cvs
+                  </a>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

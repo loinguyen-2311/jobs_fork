@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% cache "cache_header" do %>
+        <head>
+            <meta charset="utf-8">
+            <meta property="og:title" content="<%= @job&.title || 'Job For Developer' %>" />
+            <meta property="og:description" content='Job developer' />
+            <meta property="og:image" content=<%= image_url "image_cover"%> />
+            <title>
+                Find Jobs, Employment & Career Opportunities
+            </title>
+            <!-- Stylesheets -->
+            <%= stylesheet_link_tag 'candidates/bootstrap' %>
+            <%= stylesheet_link_tag 'candidates/style' %>
+            <%= stylesheet_link_tag 'candidates/responsive' %>
+            <%= stylesheet_link_tag 'candidates/icons' %>
+            <%= stylesheet_link_tag 'candidates/flaticon' %>
+            <%= stylesheet_link_tag 'candidates/fontawesome-all' %>
+            <%= stylesheet_link_tag 'candidates/line-awesome' %>
+            <link rel="shortcut icon" href="https://devfinding.com/assets/logoweb-727cd8a68dbc9c4351067553cacb93d791e8f9a7e7e67383ba00f07e5afff092.png" type="image/x-icon">
+            <link rel="icon" href="https://devfinding.com/assets/logoweb-727cd8a68dbc9c4351067553cacb93d791e8f9a7e7e67383ba00f07e5afff092.png" type="image/x-icon">
+            <!-- Responsive -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+            <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+            <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+        </head>
+    <% end %>
+    <body data-anm=".anm">
+        <div class="page-wrapper">
+            <!-- Preloader -->
+            <div class="preloader"></div>
+            <!-- Main Header-->
+            <header class="main-header">
+                <% cache "cache_main_menu" do %>
+                    <!-- Main box -->
+                    <div class="main-box">
+                        <!--Nav Outer -->
+                        <div class="nav-outer">
+                            <div class="logo-box">
+                                <div class="logo"><a href="/">
+                                    <%= image_tag("logoweb.png", :alt => "Logo web") %> 
+                                    </a>
+                                </div>
+                            </div>
+                            <nav class="nav main-menu">
+                                <ul class="navigation" id="navbar">
+                                    <li class="current">
+                                        <span>
+                                            <a href="/">
+                                                <strong>
+                                                    Home
+                                                </strong>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="">
+                                        <span>
+                                            <a href="/candidate_jobs">
+                                                <strong>
+                                                    Find Jobs
+                                                </strong>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="">
+                                        <span>
+                                            <a target="_blank" href="https://t.me/jobforgooddev">
+                                                <strong>
+                                                    Join Telegram
+                                                </strong>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="">
+                                        <span>
+                                            <a href="/remote_jobs">
+                                                <strong>
+                                                    Remote Jobs
+                                                </strong>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <!-- Only for Mobile View -->
+                                    <% cache "cache_menu_mobile" do %>
+                                        <li class="mm-add-listing">
+                                        <a href="/hr_freelancer_jobs" class="theme-btn btn-style-one">
+                                            <strong>
+                                                HR Freelancers
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="/hr_freelancers/sessions/signup" class="theme-btn btn-style-one">
+                                            <strong>
+                                                SignUp Hr
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="/hr_freelancers/sessions/signin" class="theme-btn btn-style-one">
+                                            <strong>
+                                                SignIn Hr
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <span>
+                                        <span class="contact-info">
+                                        <a href="mailto:support@devfinding.com" class="email">
+                                            <strong>
+                                                support@devfinding.com
+                                            </strong>
+                                        </a>
+                                        </span>
+                                        <span class="social-links">
+                                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                                        <a href="#"><span class="fab fa-twitter"></span></a>
+                                        <a href="#"><span class="fab fa-instagram"></span></a>
+                                        <a href="#"><span class="fab fa-linkedin-in"></span></a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <% end %>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                        <div class="outer-box">
+                            <div class="btn-box">
+                                <a href="/hr_freelancer_jobs" class="theme-btn btn-style-one">
+                                    <strong>
+                                        HR Freelancer Jobs
+                                    </strong>
+                                </a>
+                            </div>
+                            <div class="btn-box">
+                                <a href="/hr_freelancers/sessions/signup" class="theme-btn btn-style-one">
+                                    <strong>
+                                        SignUp HR
+                                    </strong>
+                                </a>
+                            </div>
+                            <div class="btn-box">
+                                <a href="/hr_freelancers/sessions/signin" class="theme-btn btn-style-one">
+                                    <strong>
+                                        SignIn HR
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+                <!-- Mobile Header -->
+                <div class="mobile-header">
+                    <div class="logo"><a href="/">
+                        <%= image_tag("logoweb.png", :alt => "Logo web") %> 
+                        </a>
+                    </div>
+                    <!--Nav Box-->
+                    <div class="nav-outer clearfix">
+                        <div class="outer-box">
+                            <!-- Login/Register -->
+                            <div class="login-box">
+                                <a href="login-popup.html" class="call-modal"><span class="icon-user"></span></a>
+                            </div>
+                            <a href="#nav-mobile" class="mobile-nav-toggler"><span class="flaticon-menu-1"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Nav -->
+                <div id="nav-mobile"></div>
+            </header>
+            <!--End Main Header -->
+            <%= yield %>
+            <!-- Main Footer -->
+            <% cache "cache_footer" do %>
+                <footer class="main-footer">
+                    <div class="auto-container">
+                        <!--Widgets Section-->
+                        <div class="widgets-section wow fadeInUp">
+                            <div class="row">
+                                <div class="big-column col-xl-4 col-lg-3 col-md-12">
+                                    <div class="footer-column about-widget">
+                                        <div class="logo"><a href="#">
+                                            <%= image_tag("logoweb.png", :alt => "Logo web") %> 
+                                            </a>
+                                        </div>
+                                        <p class="address"><a href="mailto:support@devfinding.com" class="email">support@devfinding.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="big-column col-xl-8 col-lg-9 col-md-12">
+                                    <div class="row">
+                                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                                            <div class="footer-widget links-widget">
+                                                <h4 class="widget-title">For Candidates</h4>
+                                                <div class="widget-content">
+                                                    <ul class="list">
+                                                        <li><a href="/candidate_jobs">Browse Jobs</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                                            <div class="footer-widget links-widget">
+                                                <h4 class="widget-title">For HR Freelancers</h4>
+                                                <div class="widget-content">
+                                                    <ul class="list">
+                                                        <li><a href="/hr_freelancer_jobs">For HR Freelancers</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                                            <div class="footer-widget links-widget">
+                                                <h4 class="widget-title">Remote Jobs</h4>
+                                                <div class="widget-content">
+                                                    <ul class="list">
+                                                        <li><a href="/remote_jobs">For Remote Jobs</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Bottom-->
+                    <div class="footer-bottom">
+                        <div class="auto-container">
+                            <div class="outer-box">
+                                <div class="copyright-text">© 2020 <a href="#">
+                                <strong>
+                                    DevFinding
+                                </strong>
+                                </a>. All Right Reserved.</div>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Scroll To Top -->
+                    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+                </footer>
+                <!-- End Main Footer -->
+            <% end %>
+        </div>
+        <% cache "cache_footer_javascript" do %>
+            <!-- End Page Wrapper -->
+            <%= javascript_include_tag "candidates/jquery" %>
+            <%= javascript_include_tag "candidates/popper.min" %>
+            <%= javascript_include_tag "candidates/jquery-ui.min" %>
+            <%= javascript_include_tag "candidates/chosen.min" %>
+            <%= javascript_include_tag "candidates/bootstrap.min" %>
+            <%= javascript_include_tag "candidates/jquery.fancybox" %>
+            <%= javascript_include_tag "candidates/jquery.modal.min" %>
+            <%= javascript_include_tag "candidates/mmenu.polyfills" %>
+            <%= javascript_include_tag "candidates/mmenu" %>
+            <%= javascript_include_tag "candidates/appear" %>
+            <%= javascript_include_tag "candidates/anm.min" %>
+            <%= javascript_include_tag "candidates/ScrollMagic.min" %>
+            <%= javascript_include_tag "candidates/rellax.min" %>
+            <%= javascript_include_tag "candidates/owl" %>
+            <%= javascript_include_tag "candidates/wow" %>
+            <%= javascript_include_tag "candidates/script" %>
+        <% end %>
+    </body>
+</html>

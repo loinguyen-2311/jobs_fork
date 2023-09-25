@@ -1,0 +1,202 @@
+<!-- Banner Section-->
+<section class="banner-section">
+    <div class="auto-container">
+        <div class="row">
+            <div class="content-column col-lg-7 col-md-12 col-sm-12">
+                <div class="inner-column wow fadeInUp" data-wow-delay="1000ms">
+                    <div class="title-box">
+                        <h3>There Are <span class="colored">
+                            <%= @job_count %>
+                            </span> Postings Here<br> For you!
+                        </h3>
+                        <div class="text">Find Jobs, Employment & Career Opportunities</div>
+                    </div>
+                    <!-- Job Search Form -->
+                    <% cache "candidate_search_form" do %>
+                        <div class="job-search-form">
+                            <form method="get" action="/candidate_jobs">
+                                <div class="row">
+                                    <div class="form-group col-lg-5 col-md-12 col-sm-12">
+                                        <span class="icon flaticon-search-1"></span>
+                                        <input type="text" name="title" placeholder="Job title, keywords, or company">
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="form-group col-lg-4 col-md-12 col-sm-12 location">
+                                        <span class="icon flaticon-map-locator"></span>
+                                        <input type="text" name="location" placeholder="Location">
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="form-group col-lg-3 col-md-12 col-sm-12 btn-box">
+                                        <button type="submit" class="theme-btn btn-style-one"><span class="btn-title">Find Jobs</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <% end %>
+                    <!-- Job Search Form -->
+                    <!-- Popular Search -->
+                    <div class="popular-searches">
+                        <span class="title">Popular Searches : </span>
+                        <% @tag_list.each do |tag| %>
+                            <a href="/candidate_jobs?title=<%= tag %>"><%= tag %></a>,
+                        <% end %>
+                    </div>
+                    <!-- End Popular Search -->
+                </div>
+            </div>
+            <% cache "candidate_image_box" do %>
+                <div class="image-column col-lg-5 col-md-12">
+                <div class="image-box">
+                    <figure class="main-image wow fadeIn" data-wow-delay="500ms">
+                      <%= image_tag "banner-img-1.png", alt: "banner image" %>
+                    </figure>
+                    <!-- Info BLock One -->
+                    <div class="info_block anm wow fadeIn" data-wow-delay="1000ms" data-speed-x="2" data-speed-y="2">
+                        <span class="icon flaticon-email-3"></span>
+                        <p>Work From <br>Anywheres</p>
+                    </div>
+                    <!-- Info BLock Two -->
+                    <div class="info_block_two anm wow fadeIn" data-wow-delay="2000ms" data-speed-x="1" data-speed-y="1">
+                        <p>10k+ Candidates</p>
+                        <div class="image">
+                          <%= image_tag "multi-peoples.png" %>
+                        </div>
+                    </div>
+                    <!-- Info BLock Three -->
+                    <div class="info_block_three anm wow fadeIn" data-wow-delay="1500ms" data-speed-x="4" data-speed-y="4">
+                        <span class="icon flaticon-briefcase"></span>
+                        <p>Creative Agency</p>
+                        <span class="sub-text">Startup</span>
+                        <span class="right_icon fa fa-check"></span>
+                    </div>
+                    <!-- Info BLock Four -->
+                    <div class="info_block_four anm wow fadeIn" data-wow-delay="2500ms" data-speed-x="3" data-speed-y="3">
+                        <span class="icon flaticon-file"></span>
+                        <div class="inner">
+                            <p>Upload Your CV</p>
+                            <span class="sub-text">It only takes a few seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</section>
+<!-- End Banner Section-->
+<!-- Job Categories -->
+<%# <%= render 'category' %>
+<!-- End Job Categories -->
+<!-- Job Section -->
+<section class="job-section">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <h2>Featured Jobs</h2>
+            <div class="text">Know your worth and find the job that qualify your life</div>
+        </div>
+        <div class="row wow fadeInUp">
+            <% @jobs.each do |job| %>
+            <!-- Job Block -->
+                <div class="job-block col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-box">
+                        <div class="content">
+                            <span class="company-logo"><img src="<%= job&.company_logo %>" alt=""></span>
+                            <h4><a href="/single_job/<%= job.id %>">
+                                <%= job.title %>
+                                </a>
+                            </h4>
+                            <ul class="job-info">
+                                <li><span class="icon flaticon-briefcase"></span>
+                                    <%= job.category %>
+                                </li>
+                                <li><span class="icon flaticon-map-locator"></span><%= job.province %></li>
+                                <li><span class="icon flaticon-clock-3"></span><%= job.created_at.strftime('%a %b %d') %></li>
+                                <li><span class="icon flaticon-money"></span><%= job.salary_text %></li>
+                            </ul>
+                            <ul class="job-other-info">
+                                <li class="time">Full Time</li>
+                            </ul>
+                            <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="btn-box">
+            <a href="/candidate_jobs" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Load More Listing</span></a>
+        </div>
+    </div>
+</section>
+<!-- End Job Section -->
+<!--Clients Section-->
+<% cache "candidate_clients" do %>
+<section class="clients-section">
+    <div class="sponsors-outer wow fadeInUp">
+        <!--Sponsors Carousel-->
+        <ul class="sponsors-carousel owl-carousel owl-theme">
+            <li class="slide-item">
+                <figure class="image-box"><a href="#">
+                  <%= image_tag "1-1.png", alt: "Image" %>
+                </a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#">
+                  <%= image_tag "1-2.png", alt: "Image" %>
+                </a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#"><%= image_tag "1-3.png" %></a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#"><%= image_tag "1-4.png" %></a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#"><%= image_tag "1-5.png" %></a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#"><%= image_tag "1-6.png" %></a></figure>
+            </li>
+            <li class="slide-item">
+                <figure class="image-box"><a href="#"><%= image_tag "1-7.png" %></a></figure>
+            </li>
+        </ul>
+    </div>
+</section>
+<% end %>
+<!-- End Clients Section-->
+<!-- About Section -->
+<%# <% render 'about_session' %>
+<!-- End About Section -->
+<!-- App Section -->
+<%# <%= render 'download' %>
+<!-- End App Section -->
+<!-- Call To Action -->
+<% cache "candidate_hr_freelancer" do %>
+    <section class="call-to-action">
+        <div class="auto-container">
+            <div class="outer-box wow fadeInUp">
+                <div class="content-column">
+                    <div class="sec-title">
+                        <h2>
+                            HR Freelancer?
+                        </h2>
+                        <div class="text">
+                            Become a HR Freelancer and make money with DevFinding.
+                        </div>
+                        <a href="/hr_freelancer_jobs" class="theme-btn btn-style-one bg-blue">
+                            <span class="btn-title">
+                                Start Money Now
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="image-column" style="background-image: url(<%= image_path "image-1.png" %>);">
+                    <figure class="image">
+                    <%= image_tag "image-1.png", alt: "image 1" %>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action -->
+<% end %>

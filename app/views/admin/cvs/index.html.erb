@@ -1,0 +1,152 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div id="job-cv-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog" style="width:55%;">
+                    <div class="modal-content">
+                        <%= nested_form_for(:cvs, :url => { :controller => 'cvs', :action => 'change_status', :class => 'modal-content' }) do |f| %>
+                        <div class="modal-header">
+                            <a type="button" class="close" data-dismiss="modal" aria-hidden="true">×</a>
+                            <center>
+                                <h4 class="modal-title" id="custom-width-modalLabel">
+                                    Edit CV Information
+                                </h4>
+                            </center>
+                        </div>
+                        <div class="modal-body">
+                            <h4 id="faq-label">CV ID</h4>
+                            <%= f.text_field :id,
+                                :id => "cv-id",
+                                :class=>"form-control",
+                                :required => true,
+                                :placeholder => 'Question',
+                                :readonly => true
+                                %>
+                            <h4>
+                                Cv Status
+                            </h4>
+                            <%= f.select :status, options_for_select(Cv.statuses, f.object&.statuses&.value), {}, { class: 'js-multiple-courses form-control', required: true, id: 'id-cv-status' } %>
+
+                            <div class="form-group row">
+                                <h4 id="faq-label">
+                                    Candidate Name
+                                </h4>
+                                <div class="col-sm-10">
+                                    <%= f.text_field :candidate_name,
+                                        :class => "form-control",
+                                        :id => "cv-id-candidate-name",
+                                        :placeholder => 'Enter candidate name'
+                                    %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a type="button" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <%= f.submit "Agree", :class => "btn btn-primary" %>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <div class="table-rep-plugin">
+                <div class="table-responsive" data-pattern="priority-columns">
+                    <table id="datatable" class="table  table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                 <th data-priority="1">
+                                    Job Type
+                                </th>
+                                <th data-priority="3">
+                                    Status
+                                </th>
+                                <th data-priority="1">
+                                    CV_Link
+                                </th>
+                                <th data-priority="1">
+                                    Job_Detail
+                                </th>
+                                 <th data-priority="1">
+                                    Job Title
+                                </th>
+                                <th data-priority="1">
+                                    Expected_Salary
+                                </th>
+                                <th data-priority="1">
+                                    Email
+                                </th>
+                                <th data-priority="1">
+                                    Candidate_Name
+                                </th>
+                                <th data-priority="1">
+                                    Onboarding_Time
+                                </th>
+                                 <th data-priority="1">
+                                    From Leader
+                                </th>
+                                <th data-priority="6">
+                                    Created_Day
+                                </th>
+                                <th data-priority="6">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @admin_cvs.each do |cv| %>
+                            <tr>
+                                <td>
+                                  <%= cv.id %>
+                                </td>
+                                <td>
+                                  <%= cv.job.job_type == 'normal' ? 'normal' : 'marketing' %>
+                                </td>
+                                <td>
+																	<% status = Cv.statuses[:"#{cv.status}"] %>
+                                    <button
+																			class="btn btn-primary waves-effect waves-light"
+																			data-target="#job-cv-modal"
+																			data-toggle="modal"
+																			onclick="handleChangeStatusCV(<%= cv.id %>, <%= status %>)"
+																			class="btn-primary"
+																		>
+                                    <%= cv.status %>
+                                    </button>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="https://<%= cv.cv_url %>">
+                                    View CV (<%= cv.job.id %>)
+                                    </a>
+                                </td>    
+                                <td>
+                                    <a target="_blank" href="https://devfinding.com/single_job/<%= cv.job.id %>">
+                                    View Job
+                                    </a>
+                                </td>
+                                 <td>
+                                  <%= cv.job.title %>
+                                </td>
+                                <td><button class="btn-primary"><%= cv.expected_salary %></button></td>
+                                <td><button class="btn-primary"><%= cv.email %></button></td>
+                                <td><button class="btn-primary"><%= cv.candidate_name %></button></td>
+                                <td><button class="btn-primary"><%= cv.onboarding_time %></button></td>
+                                <td><button class="btn-primary"><%= cv.from_leader || 'From Admin' %></button></td>
+                                <td>
+                                    <%= cv.created_at.strftime("%d-%m-%Y %I:%M%p") %>
+                                </td>
+                                <td>
+                                    <button onclick="deleteCVByID(<%= cv.job_id %>, <%= cv.id %>)" class="btn btn-danger waves-effect w-md waves-light m-b-5">
+                                    Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

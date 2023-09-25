@@ -1,0 +1,37 @@
+<div id="create_email_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width:55%;">
+        <div class="modal-content">
+            <%= form_for(:email_marketing, :url => {
+                :controller => "email_marketings",
+                :action => 'create',
+                :class => 'modal-content' }) do |f| %>
+            <div class="modal-header">
+                <a type="button" class="close" data-dismiss="modal" aria-hidden="true">×</a>
+                <center>
+                    <h4 class="modal-title" id='custom-width-modalLabel'>
+                        Add Email Marketing
+                    </h4>
+                </center>
+            </div>
+            <div class="modal-body">
+                <%= f.email_field :email, :class=>"form-control", :required => true, :placeholder => 'Enter email marketing' %>
+            </div>
+
+            <div class="modal-body">
+                <%= f.text_field :phone_number, :class=>"form-control", :required => true, :placeholder => 'Enter phone number' %>
+            </div>
+
+            <div class="modal-body">
+                <%= f.text_field :job_title, :class=>"form-control", :required => true, :placeholder => 'Enter job title' %>
+            </div>
+
+            <div class="modal-footer">
+                <a type="button" class="btn btn-danger" data-dismiss="modal">
+                Cancel
+                </a>
+                <%= f.submit 'Create', :class => 'btn btn-primary' %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>

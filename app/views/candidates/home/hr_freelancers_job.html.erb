@@ -1,0 +1,245 @@
+<style>
+    .card-box {
+        display: inline-table !important;
+    }
+</style>
+<!-- Header Span -->
+<span class="header-span"></span>
+<!-- Job Detail Section -->
+<section class="job-detail-section">
+    <!-- Upper Box -->
+    <div class="upper-box">
+        <div class="auto-container">
+            <!-- Job Block -->
+            <div class="job-block-seven">
+                <div class="inner-box">
+                    <div class="content">
+                        <span class="company-logo"><img src="<%= @job&.company_logo %>" alt="" /></span>
+                        <h4>
+                            <a>
+                                <%= @job.title %>
+                            </a>
+                        </h4>
+                        <ul class="job-info">
+                            <li>
+                                <span class="icon flaticon-briefcase"></span>
+                                <%= @job.category %>
+                            </li>
+                            <li><span class="icon flaticon-map-locator"></span><%= @job.province %></li>
+                            <li><span class="icon flaticon-clock-3"></span><%= @job.created_at.strftime('%a %b %d') %></li>
+                            <% if @job.sync_from_partner == 'dtalent' %>
+                            <li><span class="icon flaticon-money"></span><%= @job.salary_text %></li>
+                            <% else %>
+                            <li><span class="icon flaticon-money"></span><%= number_to_currency(@job.min_salary, unit: '') %> - <%= number_to_currency(@job.max_salary, unit: '') %> VND</li>
+                            <% end %>
+                        </ul>
+                        <ul class="job-other-info">
+                            <li class="time">Full Time</li>
+                        </ul>
+                    </div>
+                    <%= form_for(:candidate, :html => {:class => 'wpcf7-form'}, :url =>{:controller => 'candidates/home', :action => 'apply_job'}) do |f| %>
+                        <div class="card-box">
+                            <% if flash[:applied].nil? %>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label>
+                                            Upload Your CV
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <%= f.file_field :file, :class => "form-control", :required => true, :accept => "application/pdf" %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label>
+                                            Your Expected Salary
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <%= f.text_field :expected_salary, :class => "form-control", :required => true, :placeholder => '20000000 VND Gross Or Net' %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label>
+                                            Your Email
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <%= f.email_field :email, :class => "form-control", :required => true, :placeholder => 'dev@gmail.com' %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label>
+                                            Your Full Name
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <%= f.text_field :candidate_name, :class => "form-control", :required => true, :placeholder => 'Mai Thanh Hoang' %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label>
+                                            Onboarding Time
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <%= f.date_field :onboarding_time, :class => "form-control", :required => true, :onfocus => "(this.type='date')" %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <%= f.hidden_field :job_id, :value => @job.id %>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <%= f.hidden_field :from_leader, :value => params[:from_leader] %>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <br />
+                            <% if flash[:applied] %>
+                                <div class="card-box">
+                                    <div class="col-12 text-center">
+                                        <%= f.submit "Applied", :class => 'theme-btn btn-style-one', :disabled => true %>
+                                    </div>
+                                </div>
+                            <% else %>
+                                <div class="card-box">
+                                    <div class="col-12 text-center">
+                                        <%= f.submit "Apply Job", :class => 'theme-btn btn-style-one' %>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="job-detail-outer">
+        <div class="auto-container">
+            <div class="row">
+                <div class="content-column col-lg-8 col-md-12 col-sm-12">
+                    <% if @job.sync_from_partner == 'dtalent' %>
+                    <div class="job-detail">
+                        <%= @job.description.html_safe %>
+                    </div>
+                    <% else %>
+                    <div class="job-detail">
+                        <div class="title-box">
+                            <strong>
+                                Job description:
+                            </strong>
+                        </div>
+                        <%= @job.description.html_safe %>
+                        <div class="title-box">
+                            <strong>
+                                Job Requirement:
+                            </strong>
+                        </div>
+                        <%= @job.requirement.html_safe %>
+                        <div class="title-box">
+                            <strong>
+                                Job benifit:
+                            </strong>
+                        </div>
+                        <%= @job.benifit.html_safe %>
+                    </div>
+                    <% end %>
+                    <div class="related-jobs">
+                        <div class="title-box">
+                            <h3>Related Jobs</h3>
+                            <div class="text"><%= Job.count %> jobs live - 10 added today.</div>
+                        </div>
+                        <% Job.active_job_from_dtalent.limit(3).each do |job| %>
+                        <!-- Job Block -->
+                        <div class="job-block">
+                            <div class="inner-box">
+                                <div class="content">
+                                    <span class="company-logo"><img src="<%= job&.company_logo %>" alt="" /></span>
+                                    <h4>
+                                        <a href="/single_job/<%= job.id %>">
+                                            <%= job.title %>
+                                        </a>
+                                    </h4>
+                                    <ul class="job-info">
+                                        <li><span class="icon flaticon-briefcase"></span><%= job.category %></li>
+                                        <li><span class="icon flaticon-map-locator"></span><%= job.province %></li>
+                                        <li><span class="icon flaticon-clock-3"></span><%= job.created_at.strftime('%a %b %d') %></li>
+                                        <% if job.sync_from_partner == 'dtalent' %>
+                                        <li>
+                                            <span class="icon flaticon-money"></span>
+                                            <%= job.salary_text %>
+                                        </li>
+                                        <% else %>
+                                        <li>
+                                            <span class="icon flaticon-money"></span>
+                                            <%= number_to_currency(job.min_salary) %> - <%= number_to_currency(job.max_salary) %> VND
+                                        </li>
+                                        <% end %>
+                                    </ul>
+                                    <ul class="job-other-info">
+                                        <li class="time">Full Time</li>
+                                    </ul>
+                                    <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="sidebar-column col-lg-4 col-md-12 col-sm-12">
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <!-- Job Overview -->
+                            <h4 class="widget-title">Job Overview</h4>
+                            <div class="widget-content">
+                                <ul class="job-overview">
+                                    <li>
+                                        <i class="icon icon-calendar"></i>
+                                        <h5>Date Posted:</h5>
+                                        <span><%= @job.created_at.strftime('%a %b %d') %></span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-location"></i>
+                                        <h5>Location:</h5>
+                                        <span><%= @job.province %></span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-user-2"></i>
+                                        <h5>Job Title:</h5>
+                                        <span><%= @job.title %></span>
+                                    </li>
+                                    <li>
+                                        <% if @job.sync_from_partner == 'dtalent' %>
+                                    </li>
+
+                                    <li>
+                                        <span class="icon flaticon-money"></span>
+                                        Salary: <%= @job.salary_text %>
+                                    </li>
+                                    <% else %>
+                                    <li>
+                                        <span class="icon flaticon-money"></span>
+                                        Salary: <%= number_to_currency(@job.min_salary, unit: '') %> - <%= number_to_currency(@job.max_salary, unit: '') %> VND
+                                    </li>
+                                    <% end %>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Job Detail Section -->
+
+<script>
+    $("#onboarding_time_id").attr("placeholder", "Type here to search");
+</script>

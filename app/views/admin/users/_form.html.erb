@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box" align="center">
+            <h4 class="card-box">
+                <label class="btn btn-success">
+                    <%= yield :action_title %>
+                </label>
+            </h4>
+        </div>
+    </div>
+</div>     
+
+<div class="col-12">
+    <div class="p-2">
+        <%= nested_form_for([:admin, @admin_user], :html => { :class => 'form-horizontal', :multipart => true }) do |f| %>
+            <div class="card-box">
+                <div class="form-group row">
+                        <label class="col-sm-2  col-form-label" for="example-fileinput">
+                            Facebook Link
+                        </label>
+                        <div class="col-sm-10">
+                            <%= f.text_field :facebook_link,
+                                :class => "form-control",
+                                :placeholder => 'Enter your facebook link'
+                            %>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="card-box">
+
+                <div class="col-12 text-center">
+                    <%= link_to 'Back', admin_users_path, class: 'btn btn-primary' %>
+                    <%= f.submit :class => 'btn btn-primary' %>
+                </div>
+
+            </div>
+
+        <% end %>
+    </div>
+</div>

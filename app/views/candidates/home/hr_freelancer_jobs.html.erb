@@ -1,0 +1,181 @@
+<% cache "hr_freelancers_title" do %>    
+    <style>
+        .active-tag {
+        color: #1967D2 !important;
+        }
+    </style>
+    <!-- Header Span -->
+    <span class="header-span"></span>
+    <!--Page Title-->
+    <section class="page-title">
+        <div class="auto-container">
+            <div class="title-outer">
+                <h1>
+                    HR Freelancers
+                </h1>
+                <ul class="page-breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        HR Freelancers
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+<% end %>
+
+<!-- Listing Section -->
+<section class="ls-section">
+    <div class="auto-container">
+        <div class="filters-backdrop"></div>
+        <div class="row">
+            <!-- Filters Column -->
+            <div class="filters-column col-lg-4 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="filters-outer">
+                        <% cache "hr_freelancers_search_form" do %> 
+                            <button type="button" class="theme-btn close-filters">X</button>
+                            <!-- Filter Block -->
+                            <div class="filter-block">
+                                <h4>Search by Keywords</h4>
+                                <form method="get" action="/hr_freelancer_jobs">
+                                    <div class="form-group">
+                                        <input value="<%= params[:title] %>" type="text" name="title" placeholder="Job title, Skills">
+                                        <span class="icon flaticon-search-3"></span>
+                                    </div>
+                                </form>
+                            </div>
+                        <% end %>
+                        <!-- Filter Block -->
+                        <div class="filter-block">
+                            <h4>Tags</h4>
+                            <ul class="tags-style-one">
+                                <% @tag_list.each do |item| %>
+                                <li><a class="<%= params[:title]&.downcase == item.downcase ? 'active-tag' : nil %>" href="?title=<%= item %>&location=<%=params[:location]%>"><%= item %></a></li>
+                                <% end %>
+                            </ul>
+                        </div>
+                        <div class="filter-block">
+                            <h4>Locations</h4>
+                            <ul class="tags-style-one">
+                                <% if params[:title].present? %>
+                                <% @location_list.each do |item| %>
+                                <li><a class="<%= params[:location]&.downcase == item.downcase ? 'active-tag' : nil %>" href="?title=<%=params[:title]%>&location=<%= item %>"><%= item %>(<%=Job.count_job(params[:title], item)%> jobs)</a></li>
+                                <% end %>
+                                <% else %>
+                                <% @location_list.each do |item| %>
+                                <li><a class="<%= params[:location]&.downcase == item.downcase ? 'active-tag' : nil %>" href="?title=<%=params[:title]%>&location=<%= item %>"><%= item %></a></li>
+                                <% end %>
+                                <% end %>
+                            </ul>
+                        </div>
+                         <div class="filter-block">
+                            <h4>Commission</h4>
+                            <ul class="tags-style-one">
+                                <% @commission.each do |item| %>
+                                    <li><a class="<%= params[:commission].to_i == item.to_i ? 'active-tag' : nil %>" href="?title=<%= params[:title] %>&location=<%=params[:location]%>&commission=<%= item %>">> <%= item %>Triệu</a></li>
+                                <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                    <% cache "hr_freelancers_call_action" do %> 
+                        <!-- Call To Action -->
+                        <div class="call-to-action-four">
+                            <h5>
+                                HR Freelancers?
+                            </h5>
+                            <p>
+                                Make more bonus from our platform
+                            </p>
+                            <a href="/hr_freelancers/sessions/signup" class="theme-btn btn-style-one bg-blue">
+                                <span class="btn-title">
+                                    <strong>
+                                        Register Account
+                                    </strong>
+                                </span>
+                            </a>
+                            <div class="image" style="background-image: url(images/resource/ads-bg-4.png);"></div>
+                        </div>
+                        <!-- End Call To Action -->
+                    <% end %>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="content-column col-lg-8 col-md-12 col-sm-12">
+                <div class="ls-outer">
+                    <button type="button" class="theme-btn btn-style-two toggle-filters">Show Filters</button>
+                    <!-- ls Switcher -->
+                    <div class="ls-switcher">
+                        <div class="showing-result">
+                            <%# <div class="text">Showing <strong>41-60</strong> of <strong>944</strong> jobs</div> %>
+                            <div class="text">Showing <strong>
+                                <%= @job_list.size %> <%= params[:title]%>
+                                </strong> of <strong><%= Job.jobs_count_number %></strong> jobs <%= params[:location].present? ? ' in ' + params[:location] : nil %>
+                            </div>
+                        </div>
+                    </div>
+                    <% if @job_list.size == 0 %>
+                    <h4>
+                        Job Not Found with title <strong><%= params[:title] %></strong>  <strong>in</strong> <%= params[:location] %>
+                    </h4>
+                    <h4>
+                        Try to find other jobs
+                    </h4>
+                    <% end %>
+                    <% @job_list.each do |job| %>
+                    <!-- Job Block -->
+                    <div class="job-block">
+                        <div class="inner-box">
+                            <div class="content">
+                                <span class="company-logo"><img src="<%= job&.company_logo %>" alt=""></span>
+                                <h4><a href="/hr_freelancers_job/<%= job.id %>?<%= job.title %>">
+                                    <%= job.title %>
+                                    </a>
+                                </h4>
+                                <ul class="job-info">
+                                    <li><span class="icon flaticon-briefcase"></span>
+                                        <%= job.category %>
+                                    </li>
+                                    <li><span class="icon flaticon-map-locator"></span><%= job.province %></li>
+                                    <li><span class="icon flaticon-money"></span><%= job.salary_text %></li>
+                                </ul>
+                                <ul class="job-other-info">
+                                    <li class="time">Full Time</li>
+                                    <li>
+                                        <span class="icon flaticon-money"></span><strong> Commission: </strong> <%= Job.consultant_commission(job.commission) %>
+                                    </li>
+                                </ul>
+                                <button class="bookmark-btn"><span class="flaticon-bookmark"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <% end %>
+                    <p><%= will_paginate @job_list, renderer: BootstrapPagination::Rails %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% cache "hr_freelancers_style_footer" do %>
+    <!--End Listing Page Section -->
+    <style>
+        /* thiết lập style cho thẻ a */
+        .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        }
+        /* thiết lập style cho class active */
+        .pagination a.active {
+        background-color: dodgerblue;
+        color: white;
+        }
+        /* thêm màu nền khi người dùng hover vào class không active */
+        .pagination a:hover:not(.active) {
+        background-color: #ddd;
+        }
+    </style>
+<% end %>

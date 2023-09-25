@@ -1,0 +1,22 @@
+/*
+ *= require trix
+*/
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.cardbox-payment-title {
+  margin-top: 10px;
+}
+
+.slideshow-image {
+  width: 100%;
+}

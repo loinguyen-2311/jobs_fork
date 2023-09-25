@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-sm-12">
+        <% if flash[:success] %>
+        <div class="alert alert-success">
+            <strong>Success!</strong> Successfully created...
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% end %>
+        <% if flash[:fail] %>
+        <div class="alert alert-danger">
+            </strong><%= flash[:fail] %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% end %>
+        <div class="card-box">
+            <%= render "marketing_email_modal" %>
+            <div class="table-rep-plugin">
+                <div class="table-responsive" data-pattern="priority-columns">
+                    <table id="datatable" class="table  table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th data-priority="3">Email</th>
+                                <th data-priority="3">Phone Number</th>
+                                <th data-priority="3">Job Title</th>
+                                <th data-priority="3">Sent Email</th>
+                                <th data-priority="6">Created day</th>
+                                <th data-priority="6">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% @admin_email_marketings.each do |email_marketing| %>
+                                <tr>
+                                    <td>
+                                        <%= email_marketing.id %>
+                                    </td>
+                                    <td>
+                                        <%= email_marketing.email %>
+                                    </td>
+                                    <td>
+                                        <%= email_marketing.phone_number %>
+                                    </td>
+                                    <td>
+                                        <%= email_marketing.job_title %>
+                                    </td>
+                                    <td>
+                                        <%= email_marketing.sent_email %>
+                                    </td>
+                                    <td>
+                                        <%= email_marketing.created_at.strftime('%d-%m-%Y') %>
+                                    </td>
+                                    <td> 
+                                        <button onclick="deleteEmailMarketing(<%= email_marketing.id %>)" class="btn btn-danger waves-effect w-md waves-light m-b-5">
+                                            Delete
+                                        </button>
+                                        <a href="/admin/email_marketings/<%= email_marketing.id %>" type="button" class="btn btn-success waves-effect w-md waves-light m-b-5">
+                                            Detail
+                                        </a>
+                                        <button data-toggle="modal" data-target="#create_email_modal" onclick="" class="btn btn-primary waves-effect w-md waves-light m-b-5">
+                                            Create
+                                        </button>
+                                    </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+                    <% if @admin_email_marketings.size == 0 %>
+                        <button data-toggle="modal" data-target="#create_email_modal" onclick="" class="btn btn-primary waves-effect w-md waves-light m-b-5">
+                            Create
+                        </button>
+                    <% end %>
+                    <%# <p><%= will_paginate @admin_email_marketings, renderer: BootstrapPagination::Rails %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

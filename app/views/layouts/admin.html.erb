@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+    <link rel="shortcut icon" href="https://devfinding.com/assets/logoweb-727cd8a68dbc9c4351067553cacb93d791e8f9a7e7e67383ba00f07e5afff092.png">
+    <title>DevFinding Admin</title>
+    <%= stylesheet_link_tag 'admin/bootstrap.min' %>
+    <%= stylesheet_link_tag 'admin/core' %>
+    <%= stylesheet_link_tag 'admin/components' %>
+    <%= stylesheet_link_tag 'admin/icons' %>
+    <%= stylesheet_link_tag 'admin/pages' %>
+    <%= stylesheet_link_tag 'admin/menu' %>
+    <%= stylesheet_link_tag 'admin/responsive' %>
+    <%= stylesheet_link_tag 'admin/morris' %>
+    <%= stylesheet_link_tag 'admin/summernote' %>
+    <%= stylesheet_link_tag 'admin/custombox.min' %>
+    <%= stylesheet_link_tag 'admin/sweetalert2' %>
+    <%= stylesheet_link_tag 'admin/admin' %>
+    <%= stylesheet_link_tag 'https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css' %>
+  </head>
+  <body class="fixed-left">
+    <div id="wrapper">
+      <div class="topbar">
+        <div class="topbar-left">
+          <a href="/admin/jobs" class="logo"><span>DevFinding<span></span></span><i class="zmdi zmdi-layers"></i></a>
+        </div>
+        <div class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <button class="button-menu-mobile open-left">
+                <i class="zmdi zmdi-menu"></i>
+                </button>
+              </li>
+              <li>
+                <h4 class="page-title">
+                  System Admin
+                </h4>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="left side-menu">
+        <div class="sidebar-inner slimscrollleft">
+          <div id="sidebar-menu">
+            <ul>
+                <li>
+                  <a href="/admin/users" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                </li>
+                <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span>Account</span> <span class="menu-arrow"></span></a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="/admin/users?user_type=candidate">
+                        Candidates
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/users?user_type=hr_freelancer">
+                        HR Freelancers
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                        Jobs
+                    </span>
+                    <span class="menu-arrow"></span>
+                  </a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="/admin/jobs?status=closed">
+                        Closed
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/jobs?status=going">
+                        Active
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/jobs?status=going&have_cv=true">
+                        Active & CV
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="has_sub">
+                  <a href="/admin/email_marketings" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                      Email Marketing
+                    </span>
+                  </a>
+                </li>
+                <li class="has_sub">
+                  <a target="_blank" href="https://mail.zoho.com/zm/#mail/folder/sent" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                      Zoho Mail
+                    </span>
+                   
+                  </a>
+                </li>
+                <li class="has_sub">
+                  <a target="_blank" href="http://devfinding.com/sidekiq/cron" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                      Sidekiq
+                    </span>
+                   
+                  </a>
+                </li>
+                <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                      Cvs
+                    </span>
+                    <span class="menu-arrow"></span>
+                  </a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="/admin/cvs">
+                        All CVs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/cvs?status=newly">
+                        Newly
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/cvs?status=candidate_rejected">
+                        Candidate Rejected
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/cvs?status=update_cv_again">
+                        Update Cv Again
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/admin/cvs?status=sent_to_dtalent">
+                        Sent Dtalent
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                 <li class="has_sub">
+                  <a href="javascript:void(0);" class="waves-effect">
+                    <i class="zmdi zmdi-view-list"></i>
+                    <span>
+                      External
+                    </span>
+                    <span class="menu-arrow"></span>
+                  </a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a target="_blank" href="https://devfinding.com/api/v1/jobs/full_commission_having_sync_job">
+                        Full Commission (Sync)
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://devfinding.com/api/v1/jobs/full_commission">
+                        Full Commission
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://devfinding.com/api/v1/jobs/dtalent_commission">
+                        HR Commission
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.facebook.com/fiojobexchange">
+                        Fanpage
+                      </a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="https://www.facebook.com/groups/1132359440916466">
+                        Facebook Group
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="user-box">
+            <ul class="list-inline">
+              <li>
+                <%= link_to "Logout", {
+                  controller: "admin/sessions",
+                  action: 'logout'}, :class => "text-custom zmdi zmdi-power" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-page">
+        <div class="content">
+          <div class="container">
+            <%= yield %>
+            <%= render 'layouts/footer' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END wrapper -->
+    <%= javascript_include_tag "admin/jquery.min" %>
+    <%= javascript_include_tag "admin/bootstrap.min" %>
+    <%= javascript_include_tag "admin/detect" %>
+    <%= javascript_include_tag "admin/fastclick" %>
+    <%= javascript_include_tag "admin/jquery.blockUI" %>
+     <%= javascript_include_tag "admin/jquery.min" %>
+    <%= javascript_include_tag "admin/waves" %>
+    <%= javascript_include_tag "admin/jquery.nicescroll" %>
+    <%= javascript_include_tag "admin/jquery.slimscroll" %>
+    <%= javascript_include_tag "admin/jquery.scrollTo.min" %>
+    <%= javascript_include_tag "admin/jquery.knob" %>
+    <%= javascript_include_tag "admin/morris.min" %>
+    <%= javascript_include_tag "admin/raphael-min" %>
+    <%= javascript_include_tag "admin/jquery.dashboard" %>
+    <%= javascript_include_tag "admin/jquery.core" %>
+    <%= javascript_include_tag "admin/jquery.app" %>
+    <%= javascript_include_tag "admin/modernizr.min" %>
+    <%= javascript_include_tag "admin/summernote.min" %>
+    <%= javascript_include_tag "admin/custombox.min" %>
+    <%= javascript_include_tag "admin/legacy.min" %>
+    <%= javascript_include_tag 'admin/sweetalert2' %>
+    <%= javascript_include_tag 'admin/admin' %>
+     <%= javascript_include_tag "admin/jquery.min" %>
+    <%= javascript_include_tag "admin/jquery.dataTables" %>
+    <%= javascript_include_tag "admin/dataTables.bootstrap.min" %>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#datatable').DataTable();
+            $('.js-multiple-courses').select2();
+        });
+    </script>
+  </body>
+</html>

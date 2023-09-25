@@ -1,0 +1,65 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/**/*'
+    - 'test/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'spec/**/*'
+    - 'Gemfile'
+
+# inherit_from: .rubocop_todo.yml
+
+Security/Eval:
+  Enabled: true
+
+Style/AndOr:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Layout/CaseIndentation:
+  IndentOneStep: true
+
+Layout/FirstParameterIndentation:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/DuplicateMethods:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/EndOfLine:
+  Enabled: false

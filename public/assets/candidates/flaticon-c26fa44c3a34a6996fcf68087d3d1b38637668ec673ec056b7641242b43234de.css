@@ -1,0 +1,1168 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 27/12/2020 17:38
+  	*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("/fonts/Flaticon.eot");
+  src: url("/fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("/assets/candidates/Flaticon-d01ee98b8c7655a14b119b6c6ea0594767e3db1a7d9aade207ac892f484a18fd.woff2") format("woff2"), url("/fonts/Flaticon.woff") format("woff"), url("/fonts/Flaticon.ttf") format("truetype"), url("/fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("https://creativelayers.net/themes/superio/fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+/* line 26, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-style: normal;
+}
+
+/* line 32, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-notebook:before {
+  content: "\f100";
+}
+
+/* line 33, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-edit:before {
+  content: "\f101";
+}
+
+/* line 34, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-placeholder:before {
+  content: "\f102";
+}
+
+/* line 35, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-paper-plane:before {
+  content: "\f103";
+}
+
+/* line 36, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-user:before {
+  content: "\f104";
+}
+
+/* line 37, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-unlink:before {
+  content: "\f105";
+}
+
+/* line 38, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-search:before {
+  content: "\f106";
+}
+
+/* line 39, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-drop:before {
+  content: "\f107";
+}
+
+/* line 40, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-christmas-tree:before {
+  content: "\f108";
+}
+
+/* line 41, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-plus:before {
+  content: "\f109";
+}
+
+/* line 42, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-battery:before {
+  content: "\f10a";
+}
+
+/* line 43, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-target:before {
+  content: "\f10b";
+}
+
+/* line 44, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-first-aid-kit:before {
+  content: "\f10c";
+}
+
+/* line 45, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-tablet:before {
+  content: "\f10d";
+}
+
+/* line 46, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-dustbin:before {
+  content: "\f10e";
+}
+
+/* line 47, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-telegram-logo:before {
+  content: "\f10f";
+}
+
+/* line 48, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-4-square-shapes:before {
+  content: "\f110";
+}
+
+/* line 49, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-speech-bubble-and-three-dots:before {
+  content: "\f111";
+}
+
+/* line 50, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-man:before {
+  content: "\f112";
+}
+
+/* line 51, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-tree-of-love:before {
+  content: "\f113";
+}
+
+/* line 52, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-play-button:before {
+  content: "\f114";
+}
+
+/* line 53, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-royal-crown-of-elegant-vintage-design:before {
+  content: "\f115";
+}
+
+/* line 54, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-desktop-computer-with-magnifying-lens-focusing-on-data:before {
+  content: "\f116";
+}
+
+/* line 55, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-test-tube-flask-and-drop-of-blood:before {
+  content: "\f117";
+}
+
+/* line 56, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-stocks-graphic-on-laptop-monitor:before {
+  content: "\f118";
+}
+
+/* line 57, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-attachment:before {
+  content: "\f119";
+}
+
+/* line 58, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-transport:before {
+  content: "\f11a";
+}
+
+/* line 59, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-recycle-triangle-of-three-arrows-outlines:before {
+  content: "\f11b";
+}
+
+/* line 60, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-arrows:before {
+  content: "\f11c";
+}
+
+/* line 61, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-snowflake:before {
+  content: "\f11d";
+}
+
+/* line 62, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-clock:before {
+  content: "\f11e";
+}
+
+/* line 63, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-find-in-folder:before {
+  content: "\f11f";
+}
+
+/* line 64, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-smartphone:before {
+  content: "\f120";
+}
+
+/* line 65, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-arrow-pointing-to-right:before {
+  content: "\f121";
+}
+
+/* line 66, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-gas-pump:before {
+  content: "\f122";
+}
+
+/* line 67, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-house-silhouette:before {
+  content: "\f123";
+}
+
+/* line 68, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-arrows-1:before {
+  content: "\f124";
+}
+
+/* line 69, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-floor:before {
+  content: "\f125";
+}
+
+/* line 70, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-exercise:before {
+  content: "\f126";
+}
+
+/* line 71, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-love-planet:before {
+  content: "\f127";
+}
+
+/* line 72, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-workers:before {
+  content: "\f128";
+}
+
+/* line 73, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-open-magazine:before {
+  content: "\f129";
+}
+
+/* line 74, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-confirm-schedule:before {
+  content: "\f12a";
+}
+
+/* line 75, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-star:before {
+  content: "\f12b";
+}
+
+/* line 76, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-order:before {
+  content: "\f12c";
+}
+
+/* line 77, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-key:before {
+  content: "\f12d";
+}
+
+/* line 78, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-medical:before {
+  content: "\f12e";
+}
+
+/* line 79, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-smartphone-1:before {
+  content: "\f12f";
+}
+
+/* line 80, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-plug:before {
+  content: "\f130";
+}
+
+/* line 81, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-arrows-2:before {
+  content: "\f131";
+}
+
+/* line 82, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-arrows-3:before {
+  content: "\f132";
+}
+
+/* line 83, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-money-bag:before {
+  content: "\f133";
+}
+
+/* line 84, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-next:before {
+  content: "\f134";
+}
+
+/* line 85, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-back:before {
+  content: "\f135";
+}
+
+/* line 86, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-reload:before {
+  content: "\f136";
+}
+
+/* line 87, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-headphones:before {
+  content: "\f137";
+}
+
+/* line 88, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-signs:before {
+  content: "\f138";
+}
+
+/* line 89, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-diamond:before {
+  content: "\f139";
+}
+
+/* line 90, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-chat:before {
+  content: "\f13a";
+}
+
+/* line 91, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-phone:before {
+  content: "\f13b";
+}
+
+/* line 92, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-down-chevron:before {
+  content: "\f13c";
+}
+
+/* line 93, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-up-chevron:before {
+  content: "\f13d";
+}
+
+/* line 94, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-stairs:before {
+  content: "\f13e";
+}
+
+/* line 95, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-music-player:before {
+  content: "\f13f";
+}
+
+/* line 96, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-play-button-1:before {
+  content: "\f140";
+}
+
+/* line 97, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-speaker:before {
+  content: "\f141";
+}
+
+/* line 98, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-menu:before {
+  content: "\f142";
+}
+
+/* line 99, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-share:before {
+  content: "\f143";
+}
+
+/* line 100, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-map:before {
+  content: "\f144";
+}
+
+/* line 101, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-hourglass:before {
+  content: "\f145";
+}
+
+/* line 102, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-layers:before {
+  content: "\f146";
+}
+
+/* line 103, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-home:before {
+  content: "\f147";
+}
+
+/* line 104, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-handshake:before {
+  content: "\f148";
+}
+
+/* line 105, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-time:before {
+  content: "\f149";
+}
+
+/* line 106, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-worldwide:before {
+  content: "\f14a";
+}
+
+/* line 107, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-board:before {
+  content: "\f14b";
+}
+
+/* line 108, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-twitter:before {
+  content: "\f14c";
+}
+
+/* line 109, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-smartphone-2:before {
+  content: "\f14d";
+}
+
+/* line 110, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-mobile:before {
+  content: "\f14e";
+}
+
+/* line 111, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-maps-and-flags:before {
+  content: "\f14f";
+}
+
+/* line 112, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-add:before {
+  content: "\f150";
+}
+
+/* line 113, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-substract:before {
+  content: "\f151";
+}
+
+/* line 114, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-phone-call:before {
+  content: "\f152";
+}
+
+/* line 115, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-monitor:before {
+  content: "\f153";
+}
+
+/* line 116, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-menu-1:before {
+  content: "\f154";
+}
+
+/* line 117, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-cancel:before {
+  content: "\f155";
+}
+
+/* line 118, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-24-hours:before {
+  content: "\f156";
+}
+
+/* line 119, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-t-shirt-outline:before {
+  content: "\f157";
+}
+
+/* line 120, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-folder-outline:before {
+  content: "\f158";
+}
+
+/* line 121, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-quote:before {
+  content: "\f159";
+}
+
+/* line 122, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-play-button-2:before {
+  content: "\f15a";
+}
+
+/* line 123, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-right-quotation-sign:before {
+  content: "\f15b";
+}
+
+/* line 124, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-up-arrow:before {
+  content: "\f15c";
+}
+
+/* line 125, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-open-mail-interface-symbol:before {
+  content: "\f15d";
+}
+
+/* line 126, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-menu-button:before {
+  content: "\f15e";
+}
+
+/* line 127, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-smartphone-3:before {
+  content: "\f15f";
+}
+
+/* line 128, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-add-1:before {
+  content: "\f160";
+}
+
+/* line 129, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-play-button-3:before {
+  content: "\f161";
+}
+
+/* line 130, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-play-button-4:before {
+  content: "\f162";
+}
+
+/* line 131, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-support:before {
+  content: "\f163";
+}
+
+/* line 132, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-close:before {
+  content: "\f164";
+}
+
+/* line 133, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-heart-1:before {
+  content: "\f165";
+}
+
+/* line 134, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-renewable:before {
+  content: "\f166";
+}
+
+/* line 135, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-bar-chart:before {
+  content: "\f167";
+}
+
+/* line 136, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-profit:before {
+  content: "\f168";
+}
+
+/* line 137, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-settings:before {
+  content: "\f169";
+}
+
+/* line 138, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-confirm:before {
+  content: "\f16a";
+}
+
+/* line 139, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-edit-1:before {
+  content: "\f16b";
+}
+
+/* line 140, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-share-1:before {
+  content: "\f16c";
+}
+
+/* line 141, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-decreasing:before {
+  content: "\f16d";
+}
+
+/* line 142, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-graph:before {
+  content: "\f16e";
+}
+
+/* line 143, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-multi-tab:before {
+  content: "\f16f";
+}
+
+/* line 144, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-graph-1:before {
+  content: "\f170";
+}
+
+/* line 145, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-graph-2:before {
+  content: "\f171";
+}
+
+/* line 146, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-tick:before {
+  content: "\f172";
+}
+
+/* line 147, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-pin:before {
+  content: "\f173";
+}
+
+/* line 148, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-alarm-clock:before {
+  content: "\f174";
+}
+
+/* line 149, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-close-1:before {
+  content: "\f175";
+}
+
+/* line 150, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-settings-1:before {
+  content: "\f176";
+}
+
+/* line 151, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-telephone:before {
+  content: "\f177";
+}
+
+/* line 152, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-home-1:before {
+  content: "\f178";
+}
+
+/* line 153, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-search-1:before {
+  content: "\f179";
+}
+
+/* line 154, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-notification:before {
+  content: "\f17a";
+}
+
+/* line 155, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-attachment-1:before {
+  content: "\f17b";
+}
+
+/* line 156, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-down-arrow:before {
+  content: "\f17c";
+}
+
+/* line 157, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-tv:before {
+  content: "\f17d";
+}
+
+/* line 158, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-phone-receiver:before {
+  content: "\f17e";
+}
+
+/* line 159, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-next-1:before {
+  content: "\f17f";
+}
+
+/* line 160, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-back-1:before {
+  content: "\f180";
+}
+
+/* line 161, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-clock-1:before {
+  content: "\f181";
+}
+
+/* line 162, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-email:before {
+  content: "\f182";
+}
+
+/* line 163, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-email-1:before {
+  content: "\f183";
+}
+
+/* line 164, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-engineer:before {
+  content: "\f184";
+}
+
+/* line 165, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-cog:before {
+  content: "\f185";
+}
+
+/* line 166, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-cog-1:before {
+  content: "\f186";
+}
+
+/* line 167, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-call:before {
+  content: "\f187";
+}
+
+/* line 168, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-call-1:before {
+  content: "\f188";
+}
+
+/* line 169, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-email-2:before {
+  content: "\f189";
+}
+
+/* line 170, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-shopping-bag:before {
+  content: "\f18a";
+}
+
+/* line 171, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-clock-2:before {
+  content: "\f18b";
+}
+
+/* line 172, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-custom:before {
+  content: "\f18c";
+}
+
+/* line 173, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-settings-2:before {
+  content: "\f18d";
+}
+
+/* line 174, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-monitor-1:before {
+  content: "\f18e";
+}
+
+/* line 175, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-stats:before {
+  content: "\f18f";
+}
+
+/* line 176, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-monitor-2:before {
+  content: "\f190";
+}
+
+/* line 177, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-bars:before {
+  content: "\f191";
+}
+
+/* line 178, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-bar-chart-1:before {
+  content: "\f192";
+}
+
+/* line 179, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-bars-1:before {
+  content: "\f193";
+}
+
+/* line 180, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-camera:before {
+  content: "\f194";
+}
+
+/* line 181, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-camera-1:before {
+  content: "\f195";
+}
+
+/* line 182, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-camera-2:before {
+  content: "\f196";
+}
+
+/* line 183, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-dslr-camera:before {
+  content: "\f197";
+}
+
+/* line 184, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-tower:before {
+  content: "\f198";
+}
+
+/* line 185, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-technical-support:before {
+  content: "\f199";
+}
+
+/* line 186, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-maintenance:before {
+  content: "\f19a";
+}
+
+/* line 187, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-production:before {
+  content: "\f19b";
+}
+
+/* line 188, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-3d-printer:before {
+  content: "\f19c";
+}
+
+/* line 189, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-gift:before {
+  content: "\f19d";
+}
+
+/* line 190, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-winner:before {
+  content: "\f19e";
+}
+
+/* line 191, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-diploma:before {
+  content: "\f19f";
+}
+
+/* line 192, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-diploma-1:before {
+  content: "\f1a0";
+}
+
+/* line 193, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-medal:before {
+  content: "\f1a1";
+}
+
+/* line 194, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-title:before {
+  content: "\f1a2";
+}
+
+/* line 195, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-certificate:before {
+  content: "\f1a3";
+}
+
+/* line 196, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-meeting-point:before {
+  content: "\f1a4";
+}
+
+/* line 197, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-pin-1:before {
+  content: "\f1a5";
+}
+
+/* line 198, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-email-3:before {
+  content: "\f1a6";
+}
+
+/* line 199, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-call-2:before {
+  content: "\f1a7";
+}
+
+/* line 200, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-telephone-1:before {
+  content: "\f1a8";
+}
+
+/* line 201, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-teacher:before {
+  content: "\f1a9";
+}
+
+/* line 202, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-support-2:before {
+  content: "\f1aa";
+}
+
+/* line 203, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-design-tool:before {
+  content: "\f1ab";
+}
+
+/* line 204, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-success:before {
+  content: "\f1ac";
+}
+
+/* line 205, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-startup:before {
+  content: "\f1ad";
+}
+
+/* line 206, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-creativity:before {
+  content: "\f1ae";
+}
+
+/* line 207, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-creativity-1:before {
+  content: "\f1af";
+}
+
+/* line 208, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-puzzle:before {
+  content: "\f1b0";
+}
+
+/* line 209, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-vector-1:before {
+  content: "\f1b1";
+}
+
+/* line 210, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-brainstorm:before {
+  content: "\f1b2";
+}
+
+/* line 211, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-pencil:before {
+  content: "\f1b3";
+}
+
+/* line 212, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-typography:before {
+  content: "\f1b4";
+}
+
+/* line 213, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-lightbulb:before {
+  content: "\f1b5";
+}
+
+/* line 214, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-cancel-1:before {
+  content: "\f1b6";
+}
+
+/* line 215, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-dislike:before {
+  content: "\f1b7";
+}
+
+/* line 216, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-paper-plane-1:before {
+  content: "\f1b8";
+}
+
+/* line 217, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-mail:before {
+  content: "\f1b9";
+}
+
+/* line 218, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-call-3:before {
+  content: "\f1ba";
+}
+
+/* line 219, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-shopping-cart:before {
+  content: "\f1bb";
+}
+
+/* line 220, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-shopping-cart-1:before {
+  content: "\f1bc";
+}
+
+/* line 221, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-heart:before {
+  content: "\f1bd";
+}
+
+/* line 222, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-compare:before {
+  content: "\f1be";
+}
+
+/* line 223, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-user-1:before {
+  content: "\f1bf";
+}
+
+/* line 224, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-loupe:before {
+  content: "\f1c0";
+}
+
+/* line 225, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-paper-clip:before {
+  content: "\f1c1";
+}
+
+/* line 226, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-shield:before {
+  content: "\f1c2";
+}
+
+/* line 227, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-diamond-2:before {
+  content: "\f1c3";
+}
+
+/* line 228, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-checked:before {
+  content: "\f1c4";
+}
+
+/* line 229, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-right:before {
+  content: "\f1c5";
+}
+
+/* line 230, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-left:before {
+  content: "\f1c6";
+}
+
+/* line 231, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-padlock:before {
+  content: "\f1c7";
+}
+
+/* line 232, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-starred:before {
+  content: "\f1c8";
+}
+
+/* line 233, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-star-1:before {
+  content: "\f1c9";
+}
+
+/* line 234, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-grid:before {
+  content: "\f1ca";
+}
+
+/* line 235, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-option:before {
+  content: "\f1cb";
+}
+
+/* line 236, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-sort:before {
+  content: "\f1cc";
+}
+
+/* line 237, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-delete:before {
+  content: "\f1cd";
+}
+
+/* line 238, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-envelope:before {
+  content: "\f1ce";
+}
+
+/* line 239, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-quote-1:before {
+  content: "\f1cf";
+}
+
+/* line 240, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-briefcase:before {
+  content: "\f1d0";
+}
+
+/* line 241, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-file:before {
+  content: "\f1d1";
+}
+
+/* line 242, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-money-1:before {
+  content: "\f1d2";
+}
+
+/* line 243, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-promotion:before {
+  content: "\f1d3";
+}
+
+/* line 244, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-megaphone:before {
+  content: "\f1d4";
+}
+
+/* line 245, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-vector:before {
+  content: "\f1d5";
+}
+
+/* line 246, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-web-programming:before {
+  content: "\f1d6";
+}
+
+/* line 247, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-rocket-ship:before {
+  content: "\f1d7";
+}
+
+/* line 248, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-headhunting:before {
+  content: "\f1d8";
+}
+
+/* line 249, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-approved:before {
+  content: "\f1d9";
+}
+
+/* line 250, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-support-1:before {
+  content: "\f1da";
+}
+
+/* line 251, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-first-aid-kit-1:before {
+  content: "\f1db";
+}
+
+/* line 252, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-car:before {
+  content: "\f1dc";
+}
+
+/* line 253, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-compact:before {
+  content: "\f1dd";
+}
+
+/* line 254, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-map-locator:before {
+  content: "\f1de";
+}
+
+/* line 255, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-clock-3:before {
+  content: "\f1df";
+}
+
+/* line 256, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-money:before {
+  content: "\f1e0";
+}
+
+/* line 257, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-money-2:before {
+  content: "\f1e1";
+}
+
+/* line 258, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-bookmark:before {
+  content: "\f1e2";
+}
+
+/* line 259, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-search-2:before {
+  content: "\f1e3";
+}
+
+/* line 260, /Users/nguyenvanhuan243/Documents/FFF_FFF_BackEnd/app/assets/stylesheets/candidates/flaticon.scss */
+.flaticon-search-3:before {
+  content: "\f1e4";
+}

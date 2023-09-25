@@ -1,0 +1,33 @@
+dtalent_sync_job_worker:
+  cron: "0 */5 * * *"
+  class: "DtalentSyncJobWorker"
+  queue: default
+
+post_jobs_to_group_worker:
+  cron: "0 */10 * * *"
+  class: "Telegrams::PostJobsToGroupWorker"
+  queue: default
+
+post_to_partner_worker:
+  cron: "0 */10 * * *"
+  class: "Telegrams::PostToPartnerWorker"
+  queue: default
+
+congrs_to_candidates_worker:
+  cron: "0 */5 * * *"
+  class: "Telegrams::CongrsToCandidatesWorker"
+  queue: default
+
+congrs_to_partners_worker:
+  cron: "0 */5 * * *"
+  class: "Telegrams::CongrsToPartnersWorker"
+  queue: default
+
+post_commission_freelancer_worker:
+  cron: "0 */10 * * *"
+  class: "Telegrams::PostCommissionFreelancerWorker"
+  queue: default
+
+
+
+
