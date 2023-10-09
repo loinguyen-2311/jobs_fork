@@ -14,7 +14,7 @@ jobs:
           PGUSER: devfinding
           RAILS_ENV: test
           REDIS_URL: redis://localhost:6379
-          SECRET_KEY_BASE: db9f771130e52a01b1c243a02218eebe755c3d1f00e277213ede177107f0bc47380e1fecbb30dd1e64184ed4ab601ef3bf0c470cc7e06dcdf404c2dcf181d645
+          SECRET_KEY_BASE: 75a124c07ae9acdf6f40247e7d18844dba797292fa38e1b10cfe9db106f191692486dab967bfe7c774569eedd7a03e5e606cdd5de17d2363e4fed1a85f7ed164
           S3_BUCKET_NAME: demos3image
           AWS_ACCESS_KEY_ID: AKIATXT3DTTXHHPDTLQO
           AWS_SECRET_ACCESS_KEY: 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
@@ -98,7 +98,7 @@ jobs:
       - run:
           name: Production Render deploying
           command: |
-            curl -s "https://api.render.com/deploy/srv-chn0qpm4dad21k1f3690?key=qJtPe7-3_ZQ"
+            curl -s "https://api.render.com/deploy/srv-ck9410v0vg2c73fqc210?key=eL9yOOC1Ebw"
 workflows:
   version: 2
   build_and_deploy:
