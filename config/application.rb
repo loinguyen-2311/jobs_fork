@@ -4,7 +4,6 @@ require 'csv'
 # require "active_storage/engine"
 # require "action_mailbox/engine"
 
-
 # require 'openssl'
 
 # Require the gems listed in Gemfile, including any gems
@@ -27,8 +26,8 @@ module Partimebee
       end
     end
     config.active_job.queue_adapter = :sidekiq
-    config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/0/cache"
-    config.autoload_paths += Dir["#{Rails.root}/app"]
+    config.cache_store              = :redis_store, "#{ENV['REDIS_URL']}"
+    config.autoload_paths           += Dir["#{Rails.root}/app"]
     config.eager_load_paths << Rails.root.join('lib')
     if Rails.env == 'development'
       OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
