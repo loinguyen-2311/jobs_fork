@@ -5,4 +5,5 @@ class API::Entities::V1::Base < Grape::Entity
   format_with(:pretty_float) { |dt| dt.to_f.round(2) if dt }
   format_with(:pretty_1_precision) { |dt| dt.to_f.round(1) if dt }
   format_with(:round_float) { |dt| dt.to_f.round if dt }
+  # định dạng trước khi trả về api
 end
