@@ -76,5 +76,5 @@ Rails.application.configure do
       s3_region:         ENV.fetch('AWS_REGION')
     }
   }
-  config.cache_store        = :redis_cache_store, { url: ENV['REDIS_URL'] }
+  # config.cache_store        = :redis_cache_store, { url: ENV['REDIS_URL'] }
 end
