@@ -31,6 +31,15 @@ class Job < ApplicationRecord
   has_many :cvs, dependent: :destroy
 
   # == Scopes ===============================================================
+  # chỉ sử dụng được cho Postgres, tối độ chậm hơn sope sử dụng LIKE
+  scope :search_by_title, -> (query) {
+    where("title ILIKE :query", query: "%#{query}%")
+  }
+
+  # scope :search_by_title, -> (query) {
+  #   where("LOWER(title) LIKE :query", query: "%#{query.downcase}%")
+  # }
+
   scope :filter_by_status, lambda { |status|
     where(status: status)
   }
@@ -91,7 +100,7 @@ class Job < ApplicationRecord
   end
 
   def set_status
-    status = Job.statuses[:pending]
+    Job.statuses[:pending]
   end
 
   def remove_cache_feature_jobs

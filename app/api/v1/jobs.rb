@@ -95,7 +95,7 @@ class API::V1::Jobs < Grape::API
          entity: API::Entities::V1::Job
     get :send_email_marketing_jobs do
       EmailMarketing.update_all(sent_email: false) if EmailMarketing.where(sent_email: false).count == 0
-      job_by_keywords = Job.where(status: Job.statuses[:going], sync_from_partner: Job.sync_from_partners[:dtalent])
+      job_by_keywords  = Job.where(status: Job.statuses[:going], sync_from_partner: Job.sync_from_partners[:dtalent])
       email_marketings = EmailMarketing.where(sent_email: false).limit(20)
       begin
         JobMailer.send_to_email_marketing_email(job_by_keywords, email_marketings.pluck(:email)).deliver_now
@@ -125,6 +125,35 @@ class API::V1::Jobs < Grape::API
     get :send_email_candidate do
       CandidateMailer.notify_applied_job.deliver_now
       present true
+    end
+
+    # params do
+    #   requires :query, type: String, desc: 'Title to search'
+    # end
+    # desc 'Search jobs'
+    # get 'search' do
+    #   jobs = Rails.cache.fetch("#{params[:query]}") do
+    #     Job.search_by_title(params[:query]).present? ? Job.search_by_title(params[:query]).pluck(:title).to_h : Job.all.pluck(:title).to_h
+    #
+    #   end
+    #   present jobs
+    # end
+    params do
+      requires :query, type: String, desc: 'Title to search'
+    end
+
+    desc 'Search jobs'
+    get 'search' do
+      jobs = Rails.cache.fetch(params[:query]) do
+        if Job.search_by_title(params[:query]).present?
+          Job.search_by_title(params[:query]).pluck(:title)
+        else
+          Job.all.pluck(:title)
+        end
+      end
+
+      present jobs
+
     end
 
   end
