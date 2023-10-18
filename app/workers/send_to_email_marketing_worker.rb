@@ -4,8 +4,7 @@ class SendToEmailMarketingWorker
   include Sidekiq::Worker
 
   def perform
-    ['Ruby', '.Net', 'Test', 'Fullstack', 'Java', 'Database', 'Designer', 'Blockchain', 'Reactjs', 'NodeJS',
-     'Manager'].each do |keyword|
+    %w[Ruby .Net Test Fullstack Java Database Designer Blockchain Reactjs NodeJS Manager].each do |keyword|
       job_by_keywords = Job.where(status: 2).filter_by_title(keyword)
       EmailMarketing.developer_with_job_title(keyword).pluck(:email).uniq.each do |email_by_keyword|
         begin

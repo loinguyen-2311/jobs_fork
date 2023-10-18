@@ -18,6 +18,9 @@ class API::V1::Base < Grape::API
   mount API::V1::Cvs
   mount API::V1::Githubs
   mount API::V1::GithubEmailMarketings
+  # liên kết các api với định tuyến Grape
 
   add_swagger_documentation(api_version: version, hide_format: true, hide_documentation_path: true)
+  # Tự động tạo tài liệu Swagger cho API.
+  # Swagger là một công cụ tuyệt vời để tạo và xem tài liệu API, giúp cho việc hiểu rõ cách sử dụng các endpoint mà không cần đọc mã nguồn.
 end
