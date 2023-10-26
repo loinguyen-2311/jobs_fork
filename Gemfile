@@ -89,3 +89,5 @@ group :development, :test, :production do
   gem "pry-rails"
   gem "byebug", platform: :mri
 end
+# gem 'searchkick'
+gem 'meilisearch'
