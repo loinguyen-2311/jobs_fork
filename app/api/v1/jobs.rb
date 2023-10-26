@@ -145,45 +145,33 @@ class API::V1::Jobs < Grape::API
     if ENV['DEFAULT_SEARCH']
       desc 'Search jobs'
       get 'search' do
+        arr = []
         jobs = Rails.cache.fetch(params[:query]) do
           if Job.search_by_title(params[:query]).present?
-            Job.search_by_title(params[:query]).pluck(:title)
+            Job.search_by_title(params[:query]).pluck(:title, :id)
           else
             Job.all.pluck(:title, :id)
           end
         end
 
-        present jobs
+        # Chuyển jobs sang định dạng mong muốn
+        jobs.map do |title, id|
+          arr << {
+            title: title,
+            id:    id
+          }
+        end
+
+        present arr
       end
     end
-    #
-    # desc 'Search jobs'
-    # get 'search' do
-    #   jobs = Rails.cache.fetch(params[:query]) do
-    #     if Job.search_by_title(params[:query]).present?
-    #       Job.search_by_title(params[:query]).pluck(:title, :id)
-    #     else
-    #       Job.all.pluck(:title, :id)
-    #     end
-    #   end
-    #
-    #   # Chuyển jobs sang định dạng mong muốn
-    #   jobs = jobs.map do |title, id|
-    #     {
-    #       title: title,
-    #       id:    id
-    #     }
-    #   end
-    #
-    #   present jobs
-    # end
+
     if ENV['MEILI_SEARCH']
       desc 'Search jobs'
       get 'search' do
         jobs = Rails.cache.fetch(params[:query]) do
           Search.new.search_with_index(params[:query])
         end
-
         present jobs
       end
     end
