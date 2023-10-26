@@ -236,6 +236,8 @@ GEM
       net-pop
       net-smtp
     matrix (0.4.2)
+    meilisearch (0.25.1)
+      httparty (>= 0.17.1, < 0.22.0)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -555,6 +557,7 @@ DEPENDENCIES
   jquery-rails
   jwt
   koala (~> 3.2.0)
+  meilisearch
   nested_form
   nokogiri
   open_uri_redirections

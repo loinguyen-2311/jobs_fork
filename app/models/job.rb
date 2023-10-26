@@ -31,7 +31,7 @@ class Job < ApplicationRecord
   has_many :cvs, dependent: :destroy
 
   # == Scopes ===============================================================
-  # chỉ sử dụng được cho Postgres, tối độ chậm hơn sope sử dụng LIKE
+  # chỉ sử dụng được cho Postgres, tốc độ chậm hơn scope sử dụng LIKE
   scope :search_by_title, -> (query) {
     where("title ILIKE :query", query: "%#{query}%")
   }
@@ -39,7 +39,7 @@ class Job < ApplicationRecord
   # scope :search_by_title, -> (query) {
   #   where("LOWER(title) LIKE :query", query: "%#{query.downcase}%")
   # }
-
+  # searchkick word_middle: [:title]
   scope :filter_by_status, lambda { |status|
     where(status: status)
   }

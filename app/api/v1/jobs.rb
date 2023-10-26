@@ -142,19 +142,50 @@ class API::V1::Jobs < Grape::API
       requires :query, type: String, desc: 'Title to search'
     end
 
-    desc 'Search jobs'
-    get 'search' do
-      jobs = Rails.cache.fetch(params[:query]) do
-        if Job.search_by_title(params[:query]).present?
-          Job.search_by_title(params[:query]).pluck(:title)
-        else
-          Job.all.pluck(:title)
+    if ENV['DEFAULT_SEARCH']
+      desc 'Search jobs'
+      get 'search' do
+        jobs = Rails.cache.fetch(params[:query]) do
+          if Job.search_by_title(params[:query]).present?
+            Job.search_by_title(params[:query]).pluck(:title)
+          else
+            Job.all.pluck(:title, :id)
+          end
         end
+
+        present jobs
       end
-
-      present jobs
-
     end
+    #
+    # desc 'Search jobs'
+    # get 'search' do
+    #   jobs = Rails.cache.fetch(params[:query]) do
+    #     if Job.search_by_title(params[:query]).present?
+    #       Job.search_by_title(params[:query]).pluck(:title, :id)
+    #     else
+    #       Job.all.pluck(:title, :id)
+    #     end
+    #   end
+    #
+    #   # Chuyển jobs sang định dạng mong muốn
+    #   jobs = jobs.map do |title, id|
+    #     {
+    #       title: title,
+    #       id:    id
+    #     }
+    #   end
+    #
+    #   present jobs
+    # end
+    if ENV['MEILI_SEARCH']
+      desc 'Search jobs'
+      get 'search' do
+        jobs = Rails.cache.fetch(params[:query]) do
+          Search.new.search_with_index(params[:query])
+        end
 
+        present jobs
+      end
+    end
   end
 end
